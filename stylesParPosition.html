@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*selection du meme element*/
+      /*1er element d'un parent*/
+      h1:first-child {
+        color: rgb(255, 0, 0);
+      }
+      div:first-of-type {
+        color: blue;
+        border: 2px solid black;
+      }
+      h1:last-of-type {
+        color: green;
+        border: 2px dashed black;
+      }
+      /*element pair ou impair*/
+      p:nth-of-type(1) {
+        background-color: yellow;
+      }
+      p:nth-child(1) {
+        background-color: green;
+      }
+      /*psoeudo classe has*/
+      p:has(span) {
+        color: green;
+        font-size: 2px;
+      }
+      /*psoeudo classe is*/
+      div:is(p, span, h2) {
+        color: magenta;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      /*psoeudo classe only-child et only-of-type*/
+      
+    </style>
+  </head>
+  <body>
+    <h1>cibler un element par sa position</h1>
+    <div>
+      un text
+      <p>un paragraphe<span>(1)</span></p>
+      <h1>un titre h1</h1>
+      <p>un autre paragraphe(2)</p>
+    </div>
+    <h1>un autre titre h1</h1>
+    <p>autre paragraphe(3)</p>
+    <div>
+      <p>un autre paragraphe (4)</p>
+      <h3>un h3</h3>
+      <span>un span</span>
+      <h2>un h2</h2>
+    </div>
+  </body>
+</html>
